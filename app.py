@@ -3,7 +3,7 @@ import socket
 import time
 
 print("HEY")
-time.sleep(10)
+time.sleep(5)
 msgFromClient = "Hello UDP Server"
 
 bytesToSend = str.encode(msgFromClient)
@@ -19,6 +19,7 @@ print("Started")
 UDPClientSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
 print("Socket created")
+print(serverAddressPort)
 # Send to server using created UDP socket
 
 UDPClientSocket.sendto(bytesToSend, serverAddressPort)
